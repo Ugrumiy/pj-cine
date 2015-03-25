@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Романтическая Москва</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,800,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style/reset.css">
+	
+
+    <link rel="stylesheet" href="SlickNav/slicknav.css">
+    <link href="style/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+</head>
+<body>
+	<header id='page-header'>
+		<div class="wrapper-outer-header clearfix">
+			<div class="wrapper-inner clearfix">
+				<div class="logo-text clearfix">
+					<img src="image/logo-navbar.png" alt="Logo" class="logo">
+					<p class="logo-title">Романтическая Москва</p>
+					<p class='logo-title-under'>Организация предложения в кинотеатре</p>
+				</div>
+				<div class="phone-menu">
+					<form action="get" class='callback-form'>
+						<div class="phone-number">+7 495 123-45-67</div>
+						<input type="button" class='callbackbtn' value='заказать звонок'>
+					</form>
+					<nav>
+						<ul class="top-menu" id='menu'>
+				        	<li><a href="#">Главная</a></li><!--
+				        	--><li><a href="#about-us-anchor">О нас</a></li><!--
+				        	--><li><a href="#example-anchor">Пример</a></li><!--
+				        	--><li><a href="#tariffs-anchor">Тарифы</a></li><!--
+				        	--><li><a href="#cinemas-anchor">Кинотеатры</a></li><!--
+				        	--><li><a href="#contacts-anchor">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>	  
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="wrapper-outer-top-pic">
+			<div class="wrapper-inner top-pic clearfix">
+				<p>Сделай <span>предложение</span> руки и сердца своей второй половинке<br><span>в кинотеатре!</span></p>
+			</div>
+		</div>
+		<div class="wrapper-outer-aboutus">
+			<div class="wrapper-inner aboutus clearfix">
+				<ul class='block-title'>
+					<a name="about-us-anchor"></a> 
+					<li class="title-border"></li>
+					<li class='title'>О нас</li>
+					<li class="title-border"></li>
+				</ul>
+				<div class="aboutus-text-container clearfix">
+					<div class="col-right">
+						<img src="image/aboutus.png" alt="About us">
+					</div>
+					<div class="col-left">
+						<p class='text-main'>Кто не любит сходить в кино вдвоём, вместе посмеяться, побояться или романтично, прижавшись друг к другу, испытать самые нежные эмоции и чувства? И главное - вместе! Подари любимому человечку признание или романтический ролик/поздравление, снятый с твоим участием, и мы покажем его в кинотеатре непосредственно перед сеансом! Теперь твои чувства показывают в кино! ;) Время удивлять!</p>
+						<p class='text-main'>Наша команда поможет оперативно и креативно сделать вам подарок самым близким!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper-outer-example">
+			<div class="wrapper-inner example clearfix">
+				<ul class='block-title'>
+					<a name="example-anchor"></a> 
+					<li class="title-border"></li>
+					<li class='title'>Пример предложения</li>
+					<li class="title-border"></li>
+				</ul>
+				<div class="example-text-container clearfix">
+					<div class="col-left">
+						<iframe width="100%" height="380" src="https://www.youtube.com/embed/p4zluA60hjs" frameborder="0" allowfullscreen style='max-width:650px;' class='ytube'></iframe>
+					</div>
+					<div class="col-right">
+						<p class='text-main'>Прекрасная пара: Станислав и Ирина. Подготовления мероприятия заняло у нас целых три недели. Был снят клип, в котором Станислав принимал главное участие, а также слайдшоу из фотографий. Для предложения был выбран кинотестр IMAX в Реутове. По завершении был смонтирован итоговый ролик, который будет храниться в семейном архиве новой ячейки нашего общества.</p>
+						<p class='text-main'>Ориентировочная стоимость всего проекта 185 000 рублей.</p>
+						<form action="post" class='example-form'>
+							<p class="example-form-title">Хотите так же? Отправьте заявку!</p>
+								<input type="text" placeholder='Номер телефона'>
+								<input type="button" class='example-form-button' value='Заказать'>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper-outer-tariffs">
+			<div class="wrapper-inner tariffs clearfix">
+				<ul class='block-title'>
+					<a name="tariffs-anchor"></a> 
+					<li class="title-border"></li>
+					<li class='title'>Тарифы</li>
+					<li class="title-border"></li>
+				</ul>
+				<div class="tariffs-container clearfix">
+					<div class="col-left">
+						<div class="tariff-item">
+							<h2 class="tariff-title">Стандартный</h2>
+							<ul class='tariff-features'>
+								<li>Индивидуальный подход</li>
+								<li>Договоренность с кинотеатром</li>
+								<li>Монтаж романтического видео-ролика из ваших материалов</li>
+								<li>Перевод в формат кинотеатра</li>
+								<li>Трансляция ролика в рекламном блоке</li>
+								<li>Пауза после ролика для признания или поздравления</li>
+								<li>Овации зрителей</li>
+								<li>Съёмка реакции любимого человека</li>
+								<li>Монтаж итогового мини-фильма</li>
+								<li>Букет красивых цветов</li>
+							</ul>
+							<p class="tariff-price">22 800 i</p>
+							<div class="button-container">
+							<input type="button" class='tariff-button' value='Заказать'>
+							</div>
+						</div>
+					</div>
+					<div class="col-right">
+						<div class="tariff-item">
+							<h2 class="tariff-title">Оптимальный</h2>
+							<ul class='tariff-features'>
+								<li>Индивидуальный подход и выбор удобного времени</li>
+								<li>Договоренность с кинотеатром и шампанское</li>
+								<li>Съемка короткометражного клип-признание в студии</li>
+								<li>Профессиональная звукозапись и монтаж</li>
+								<li>Монтаж романтического видео-ролика из ваших материалов</li>
+								<li>Перевод в формат кинотеатра</li>
+								<li>Трансляция ролика в рекламном блоке</li>
+								<li>Пауза после ролика для признания или поздравления</li>
+								<li>Овации зрителей</li>
+								<li>Съёмка реакции любимого человека</li>
+								<li>Монтаж романтического клипа по нашему сценарию</li>
+								<li>Букет из 101 розы</li>
+							</ul>
+							<p class="tariff-price">45 800 i</p>
+							<div class="button-container">
+							<input type="button" class='tariff-button' value='Заказать'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper-outer-cinemas">
+			<div class="wrapper-inner cinemas clearfix">
+				<ul class='block-title'>
+					<a name="cinemas-anchor"></a> 
+					<li class="title-border"></li>
+					<li class='title'>Кинотеатры</li>
+					<li class="title-border"></li>
+				</ul>
+				<p class="text-main">Мы сотрудничаем со многими кинотеатрами города Москвы. Ниже вы можете посмотреть список всех кинотеатров на карте и выбрать тот, который подходит вам. Если вы хотите сделать предложение в каком-то определенном киноттеатре, которого нет в нашем списке, позвоните нам, мы постараемся заключить договор и с этим кинотеатром тоже.</p>
+			</div>
+		</div>
+
+		<div class="wrapper-outer-map">
+			<div class="wrapper-inner-map">
+				<div id="map"></div>
+			</div>	
+		</div>
+
+		<div class="wrapper-outer-questions">
+			<div class="wrapper-inner questions clearfix">
+				<ul class='block-title'>
+					<a name="contacts-anchor"></a> 
+					<li class="title-border"></li>
+					<li class='title'>Остались вопросы?</li>
+					<li class="title-border"></li>
+				</ul>
+				<div class="questions-text-container clearfix">
+					<div class="col-left">
+						<p class="call-us">Позвоните нам!</p>
+						<p class="phone-number">+7 495 123-45-67</p>
+						<p class="under">Или оставьте свой номер телефона, мы сами с вами свяжемся!</p>
+					</div>
+					<div class="col-right">
+						<form action="post" class='questions-form'>
+								<input type="text" id='questions-form-name' placeholder='Имя'>
+								<input type="text" id='questions-form-phone' placeholder='Номер телефона'>
+								<input type="button" id='questions-form-button' value='Перезвоните мне'>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="wrapper-outer-copyright">
+			<div class="wrapper-inner">
+			<div class="col-left">
+				<p class="copyright">© Романтическая Москва, 2015</p>
+				<p class="copyright-under">Организация предложения в кинотеатре</p>
+			</div>
+		</div>	
+	</div>
+	</footer>
+
+
+
+
+
+	<!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="SlickNav/jquery.slicknav.min.js"></script>
+    <script src="script/yamaps.js"></script>
+<script>
+	$(function(){
+		$('#menu').slicknav({
+			prependTo:'#page-header'
+		});
+	});
+  
+
+</script>
+
+</body>
+</html>

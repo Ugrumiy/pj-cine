@@ -1,0 +1,713 @@
+body,html{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	min-width: 600px;
+}
+.clearfix:after{
+content: "";
+display: block;
+height: 0;
+clear: both;
+
+}
+
+.wrapper-inner{
+	min-width: 600px;
+	max-width: 1200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0px auto;
+}
+.slicknav_menu {
+	display: none;
+}
+header {
+	margin-bottom: 8px;
+	.logo-text{
+		float: left;
+		width: 46%;
+		height: 80px;
+		.logo{
+			float: left;
+
+		}
+		.logo-title{
+			font-size: 26px;
+			font-weight: 300;
+			text-transform: uppercase;
+			float: left;
+			margin-left: 30px;
+			margin-top: 16px;
+		
+		}
+		.logo-title-under{
+			float: left;
+			font-size: 17px;
+			font-weight: 300;
+			text-transform: none;
+			font-style: italic;
+			margin-left: 30px;
+			margin-top: 4px;
+
+		}
+	}
+	.phone-menu{
+		float: right;
+		text-align: left;
+		width: 41%;
+		min-width: 541px;
+		.callback-form{
+			line-height: 36px;
+			position: relative;
+			.phone-number{
+				display: inline-block;
+				font-size: 27px;
+				font-weight: 700;
+				padding-left: 40px;
+				background: url('../image/header-phone-icon.png') no-repeat 16px 9px;
+
+
+			}
+			.callbackbtn{
+				color: #ffffff;
+				font-size: 11px;
+				font-weight: 700;
+				background: #ff1011;
+				border-radius: 5px;
+				border: none;
+				text-transform: uppercase;
+				padding: 7px 14px;
+				position: absolute;
+				top: 6px;
+				left: 273px;
+				cursor: pointer;
+				&:hover{
+					background: #ff1011 - 20%;
+				}
+				&:active{
+					background: #ff1011 - 40%;
+				}
+			}
+		}
+		nav{
+			float: right;
+		}
+		.top-menu{
+			margin-top: 10px;
+			li{
+				display: inline-block;
+				border-bottom: 1px dashed #000000;
+				padding-bottom: 3px;
+				margin-right: 24px;
+				&:last-child{
+					margin-right: 0px;
+				}
+				&:hover{
+					border-bottom: none;
+				}
+				a{
+					font-size: 17px;
+					font-weight: 300;
+					color: #000000;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+}
+
+main{
+	.block-title{
+		position: relative;
+		height: 90px;
+		text-align: center;
+		li{
+			display: inline-block;
+		}
+		.title{
+			position: relative;
+			margin: 0 16px; 
+			top: 10px;
+			font-size: 41px;
+			line-height: 91px;
+			font-weight: 800;
+
+		}
+		.title-border{
+			border-bottom: 3px solid #ed1c24;
+			width: 8.5%;
+			marginbottom: 10px;
+		}
+	}
+	.text-main{
+		font-size: 17px;
+		line-height: 20px;
+		margin-bottom: 20px;
+		text-align: justify;
+
+	}
+	.wrapper-outer-top-pic{
+		background: url('../image/toppicbg.jpg') 40% 0;
+		.top-pic{
+			vertical-align: middle;
+			height: 630px;
+			margin-bottom: 2px;
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 26%;
+			}
+			p{
+				display: inline-block;
+				vertical-align: middle;
+				text-transform: uppercase;
+				color: #ffffff;
+				font-size: 62px;
+				line-height: 91px;
+
+				span{
+				font-weight: 800;
+				}
+			}
+
+		}
+	}
+	.wrapper-outer-aboutus{
+		.aboutus-text-container{
+			margin-top:35px;
+			margin-bottom: 50px;
+			.col-left{
+				float: left;
+				width: 54%;
+
+			}
+			.col-right{
+				float: right;
+				width: 42%;
+				text-align: center;
+
+				img{
+					margin-top: -7px;
+					width: 100%;
+					max-width: 320px;
+				}
+			}
+		}
+	}
+	.wrapper-outer-example{
+		padding-top: 40px;
+		background: #f1f1f1 url('../image/example-bg.jpg');
+		.example-text-container{
+			margin-top: 34px;
+			padding-bottom: 115px;
+			.col-left{
+				width: 53.5%;
+				float: left;
+			}
+			.col-right{
+				width: 42.2%;
+				float: right;
+				.example-form{
+					margin-top: 72px;
+					.example-form-title{
+						font-size: 25px;
+						font-weight: 700;
+						font-style: italic;
+						margin-bottom: 18px;
+
+					}
+					input[type='text']{
+						position: relative;
+						border: none;
+						font-size: 14px;
+						color: 636363;
+						border-radius: 7px;
+						width: 185px;
+						padding: 14px 15px 12px 30px;
+						margin-right: 14px;
+						background: #ffffff url('../image/phone-icon.png') no-repeat 14px 16px;
+						margin-bottom: 20px;
+						
+					}
+					.example-form-button{
+						color: #ffffff;
+						font-size: 18px;
+						font-weight: 700;
+						background: #ff1011;
+						border-radius: 7px;
+						border: none;
+						text-transform: uppercase;
+						padding: 10px 67px;
+						cursor: pointer;
+						&:hover{
+							background: #ff1011 - 20%;
+						}
+						&:active{
+							background: #ff1011 - 40%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.wrapper-outer-tariffs{
+		background: url('../image/tariffs-bg.jpg') no-repeat;
+		padding-top: 73px;
+		padding-bottom: 160px;
+		.block-title{
+			color: #ffffff;
+		}
+		.tariffs-container{
+			position: relative;
+			margin-top: 80px;
+			.col-left{
+				padding-bottom: 36px;
+				width: 44%;
+				background-color: #ffffff;
+				float: left;
+				position: absolute;
+				bottom: 0;
+				left: 4%;
+			}
+			.col-right{
+				padding-bottom: 36px;
+				width: 44%;
+				background-color: #ffffff;
+				float: right;
+				margin-right: 4%;
+			}
+			.tariff-item{
+				.tariff-title{
+					text-align: center;
+					font-size: 24px;
+					font-weight: 700;
+					margin: 30px 0 20px 0px;
+				}
+				.tariff-features{ 
+					padding-left: 61px;
+					padding-right: 20px;
+					li{
+					font-size: 14px;
+					line-height: 27px;
+					position: relative;
+						&:before{
+							content: '';
+							width: 18px;
+							height: 15px;
+							background: url('../image/tick.png') no-repeat;
+							display: block;
+							position: absolute;
+							top:7px;
+							left: -22px;
+						}
+					}
+				}	
+				.tariff-price{
+					font-size: 28px;
+					text-align: center;
+					margin: 22px 0px;
+				}
+				.button-container{
+					text-align: center;
+					.tariff-button{
+						color: #ffffff;
+						font-size: 18px;
+						font-weight: 700;
+						background: #ff1011;
+						border-radius: 5px;
+						border: none;
+						text-transform: uppercase;
+						padding: 10px 67px;
+						cursor: pointer;
+						&:hover{
+							background: #ff1011 - 20%;
+						}
+						&:active{
+							background: #ff1011 - 40%;
+						}
+					}
+				}
+
+			}
+		}
+	}
+	.wrapper-outer-cinemas{
+		.cinemas{
+			margin-top: 50px;
+			margin-bottom: 40px;
+		}
+		.text-main{
+			margin-top: 35px;
+		}
+	}
+	.wrapper-outer-map{
+		#map{
+			width: 100%;
+			height: 730px;
+		}
+	}
+	.wrapper-outer-questions{
+		background: url('../image/questions-bg.jpg');
+		.questions{
+			padding-top: 55px;
+			padding-bottom: 80px;
+			.block-title{
+				margin-bottom: 53px;
+			}
+			.col-left{
+				width: 50%;
+				float: left;
+				margin-left: 6.9%;
+				text-align: center;
+				.call-us{
+					font-size: 30px;
+					font-weight: 700;
+				}
+				.phone-number{
+					font-size: 44px;
+					color: #ed1c24;
+					margin-top: 46px;
+					margin-left: auto;
+					margin-right: auto;
+					position: relative;
+					width: 450px;
+					background: url('../image/quest-phone-icon.png') no-repeat 13px;
+				}
+				.under{
+					width: 384px;
+					margin-left: auto;
+					margin-right: auto;
+					line-height: 23px;
+					margin-top: 37px;
+					font-size: 20px;
+					font-style: italic;
+				}
+			}
+			.col-right{
+				width: 38.8%;
+				float: right;
+				&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+
+				}
+				.questions-form{
+					display: inline-block;
+					vertical-align: middle;
+					#questions-form-name{
+						margin-top: 25px;
+						margin-bottom: 17px;
+						display: block;
+						position: relative;
+						border: none;
+						font-size: 14px;
+						color: 636363;
+						border-radius: 7px;
+						width: 270px;
+						padding: 14px 15px 12px 30px;
+						margin-right: 14px;
+						background: #ffffff url('../image/person-icon.png') no-repeat 12px 16px;
+
+					}
+					#questions-form-phone{
+						margin-bottom: 21px;
+						display: block;
+						position: relative;
+						border: none;
+						font-size: 14px;
+						color: 636363;
+						border-radius: 7px;
+						width: 270px;
+						padding: 14px 15px 12px 30px;
+						margin-right: 14px;
+						background: #ffffff url('../image/phone-icon.png') no-repeat 12px 16px;
+
+					}
+					#questions-form-button{
+						color: #ffffff;
+						font-size: 18px;
+						font-weight: 700;
+						background: #ff1011;
+						border-radius: 5px;
+						border: none;
+						text-transform: uppercase;
+						padding: 10px 25px;
+						cursor: pointer;
+						&:hover{
+							background: #ff1011 - 20%;
+						}
+						&:active{
+							background: #ff1011 - 40%;
+						}
+
+					}
+
+				}
+			}
+
+		}
+	}
+}
+footer{
+	.wrapper-outer-copyright{
+		.wrapper-inner{
+			padding: 62px 0 60px 0;
+			.col-left{
+				.copyright{
+					font-size: 26px;
+					font-weight: 300;
+					text-transform: uppercase;
+				}
+				.copyright-under{
+					font-size: 17px;
+					font-weight: 300;
+					font-style: italic;
+					margin-top: 5px;
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1068px) {
+	header{
+		.logo-text{
+			float: none;
+			width: 45%;
+			min-width: 455px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			.logo{
+				margin-right: 10px;
+			}
+			.logo-title{
+				float: none;
+			}
+			.logo-title-under{
+				float: none;
+			}
+		}
+		.phone-menu{
+			float: none;
+			width: 45%;
+			margin-left: auto;
+			margin-right: auto;
+			.callback-form{
+				.phone-number{
+					margin-left: 80px;
+				}
+				.callbackbtn{
+					left: 360px;
+				}
+				.top-menu{
+					margin-left: 0px;
+				}
+			}	
+		}
+	}
+
+	main{
+		.wrapper-outer-top-pic{
+			.top-pic{
+				height: 100%;
+				font-size: 54px;
+				margin-top: 20px;
+			}
+		}
+		.wrapper-outer-questions{
+			.questions{
+				padding-top: 55px;
+				padding-bottom: 80px;
+				.questions-text-container{
+					.col-left{
+						margin-left: 5%;
+						.phone-number{
+
+						}
+					}
+				}
+			}
+		}		
+	}
+}
+@media screen and (max-width: 904px) {
+	main{
+		.wrapper-outer-questions{
+			.questions{
+				.questions-text-container{
+					.col-left{
+						margin-left: 3%;
+						.phone-number{
+						margin-left: -1%;
+						}
+					}
+					.col-right{
+						width: 43%;
+					}
+				}
+			}
+		}		
+	}
+}
+@media screen and (max-width: 768px) {
+	header{
+		.slicknav_menu {
+			display: block;
+			min-height: 75px;
+		}
+		.slicknav_nav{
+			margin-top: 75px;
+		}
+		.slicknav_btn{
+			padding: 0.8em 0.625em;
+			 margin: 14px 11px 10px;
+		}
+		.logo-text{
+			position: absolute;
+			top: 5px;
+			left:15px;
+			width: 70%;
+			padding: 0px;
+			width: 470px;
+		}
+		.phone-menu{
+			.callback-form{
+				margin-top: 30px;
+				margin-bottom: 20px;
+				.phone-number{
+					font-size: 36px;
+					margin-left: -40px;
+				}
+				.callbackbtn{
+					font-size: 20px;
+					padding: 14px 26px;
+					top:-6px;
+					left:330px;
+
+				}
+			}
+			.top-menu{
+					display: none;
+			}
+		}
+	}
+	main{
+		.block-title{
+			.title{
+				position: relative;
+				margin: 0 15px; 
+				top: 10px;
+				font-size: 41px;
+				line-height: 91px;
+				font-weight: 800;
+			}
+			.title-border{
+				border-bottom: 3px solid #ed1c24;
+				width: 5%;
+				marginbottom: 10px;
+			}
+		}
+
+		.wrapper-outer-top-pic{
+			text-align: center;
+			.top-pic{
+				height: 100%;
+				font-size: 48px;
+				p{
+					margin-top: -60px;
+				}
+			}
+		}
+		.wrapper-outer-aboutus{
+			.aboutus-text-container{
+				.col-left{
+					float: none;
+					width: 100%;
+				}
+				.col-right{
+					float: none;
+					width: 100%;
+					text-align: center;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.wrapper-outer-example{
+
+			.example-text-container{
+				.col-left{
+					width: 100%;
+					float: none;
+					margin-bottom: 20px;
+					text-align: center;
+				}
+				.col-right{
+					width: 100%;
+					float: none;
+					padding: 0;
+					.example-form{
+						text-align: center;
+					}
+				}
+			}
+		}
+		.wrapper-outer-tariffs{
+			.tariffs-container{
+				//margin-left: 30px;
+				.col-left{
+					width: 90%;
+					padding: 3% 5%;
+					float: none;
+					position: static;
+					margin-bottom: 30px;
+				}
+				.col-right{
+					width: 90%;
+					padding: 3% 5%;
+					float: none;
+				}
+
+			}
+		}
+		.wrapper-outer-questions{
+			.questions{
+				.questions-text-container{
+					.col-left{
+						width: 100%;
+						float: none;
+						margin:0 auto;
+
+						.call-us{
+							margin-top: -35px;
+						}
+						.phone-number{
+							//margin-left: 90px;
+							margin: 30px auto;
+
+							
+						}
+						.under{
+
+						}
+					}
+					.col-right{
+						width: 50%;
+						float: none;
+						margin:0 auto;
+						text-align: center;
+						
+					}
+				}
+			}
+		}
+	}	
+
+}
