@@ -32,7 +32,7 @@
 				<div class="phone-menu">
 					<form action="get" class='callback-form'>
 						<div class="phone-number">+7 495 123-45-67</div>
-						<input type="button" class='callbackbtn' value='заказать звонок'>
+						<input type="button" class='callbackbtn submitbtn' value='заказать звонок'>
 					</form>
 					<nav>
 						<ul class="top-menu" id='menu'>
@@ -91,8 +91,8 @@
 						<p class='text-main'>Ориентировочная стоимость всего проекта 185 000 рублей.</p>
 						<form action="post" class='example-form'>
 							<p class="example-form-title">Хотите так же? Отправьте заявку!</p>
-								<input type="text" placeholder='Номер телефона'>
-								<input type="button" class='example-form-button' value='Заказать'>
+								<input type="text" placeholder='Номер телефона' name='phonenumber'>
+								<input type="button" class='example-form-button submitbtn' value='Заказать'>
 						</form>
 					</div>
 				</div>
@@ -189,10 +189,10 @@
 						<p class="under">Или оставьте свой номер телефона, мы сами с вами свяжемся!</p>
 					</div>
 					<div class="col-right">
-						<form action="post" class='questions-form'>
-								<input type="text" id='questions-form-name' placeholder='Имя'>
-								<input type="text" id='questions-form-phone' placeholder='Номер телефона'>
-								<input type="button" id='questions-form-button' value='Перезвоните мне'>
+						<form action="http://formspree.io/ugrumiy@gmail.com" class='questions-form'>
+								<input type="text" id='questions-form-name' placeholder='Имя' name='clientname'>
+								<input type="text" id='questions-form-phone' placeholder='Номер телефона' name='phonenumber'>
+								<input type="button" id='questions-form-button' class='submitbtn' value='Перезвоните мне'>
 						</form>
 					</div>
 				</div>
@@ -220,6 +220,7 @@
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="SlickNav/jquery.slicknav.min.js"></script>
     <script src="script/yamaps.js"></script>
+    <script src="script/maskedinput.js"></script>
 <script>
 	$(function(){
 		$('#menu').slicknav({
@@ -227,7 +228,14 @@
 		});
 	});
   
+ $('form').on('click','.submitbtn',function(){
+ 	var clientName = $(this).siblings('input[name="clientname"]').val()
+ 	var phoneNumber = $(this).siblings('input[name="phonenumber"]').val()
 
+ })
+jQuery(function($){
+   $('input[name="phonenumber"]').mask("+7 (999) 999-9999");
+});
 </script>
 
 </body>
