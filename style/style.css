@@ -566,6 +566,12 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
   main .wrapper-outer-aboutus .aboutus-text-container .col-right img {
     width: 100%;
   }
+  main .wrapper-outer-example .block-title .title {
+    margin: 0 10px;
+  }
+  main .wrapper-outer-example .block-title .title-border {
+    width: 3%;
+  }
   main .wrapper-outer-example .example-text-container .col-left {
     width: 100%;
     float: none;
