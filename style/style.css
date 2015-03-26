@@ -15,6 +15,7 @@ body, html {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0px auto;
+  box-sizing: border-box;
 }
 .slicknav_menu {
   display: none;
@@ -510,19 +511,22 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
     padding: 0px;
     width: 470px;
   }
+  header .phone-menu {
+    width: 100%;
+  }
   header .phone-menu .callback-form {
     margin-top: 30px;
     margin-bottom: 20px;
   }
   header .phone-menu .callback-form .phone-number {
     font-size: 36px;
-    margin-left: -40px;
+    margin-left: -1%;
   }
   header .phone-menu .callback-form .callbackbtn {
     font-size: 20px;
-    padding: 14px 26px;
-    top: -6px;
-    left: 330px;
+    padding: 14px 14px;
+    top: -11px;
+    left: 60%;
   }
   header .phone-menu .top-menu {
     display: none;
