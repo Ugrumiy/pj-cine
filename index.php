@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width; initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5; " />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Романтическая Москва</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,800,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/reset.css">
@@ -21,6 +21,23 @@
 
 </head>
 <body>
+	<div id="modal-block" class='modal-block'>
+		<form action="mailer.php" method='post' id="modal-form" class='modal-form'>
+			<input type="text" id='modal-form-name' placeholder='Имя' name='clientname'>
+			<input type="text" id='modal-form-phone' placeholder='Номер телефона' name='phonenumber'>
+			<input type="submit" id='modal-form-button' class='submitbtn' value='Перезвоните мне'>
+		</form>
+	</div>
+	<div>
+		<div class="message-container">
+			<div class="message" id="message-submit-success">
+				<p>Благодарим вас! Ваше обращение обработано. Ожидайте звонка от нашего менеджера.</p>
+			</div>
+			<div class="message" id="message-submit-error">
+				<p>К сожалению, мы не смогли обработать ваш запрос. Пожалуйста, попробуйте позже</p>
+			</div>
+		</div>
+	</div>	
 	<header id='page-header'>
 		<div class="wrapper-outer-header clearfix">
 			<div class="wrapper-inner clearfix">
@@ -30,9 +47,9 @@
 					<p class='logo-title-under'>Организация предложения в кинотеатре</p>
 				</div>
 				<div class="phone-menu">
-					<form action="get" class='callback-form'>
+					<form action="mailer.php" method='post' class='callback-form'>
 						<div class="phone-number">+7 495 123-45-67</div>
-						<input type="button" class='callbackbtn submitbtn' value='заказать звонок'>
+						<input type="button" class='callbackbtn show-modal-form' value='заказать звонок'>
 					</form>
 					<nav>
 						<ul class="top-menu" id='menu'>
@@ -89,10 +106,10 @@
 					<div class="col-right">
 						<p class='text-main'>Прекрасная пара: Станислав и Ирина. Подготовления мероприятия заняло у нас целых три недели. Был снят клип, в котором Станислав принимал главное участие, а также слайдшоу из фотографий. Для предложения был выбран кинотестр IMAX в Реутове. По завершении был смонтирован итоговый ролик, который будет храниться в семейном архиве новой ячейки нашего общества.</p>
 						<p class='text-main'>Ориентировочная стоимость всего проекта 185 000 рублей.</p>
-						<form action="post" class='example-form'>
+						<form action="mailer.php" method='post' class='example-form'>
 							<p class="example-form-title">Хотите так же? Отправьте заявку!</p>
 								<input type="text" placeholder='Номер телефона' name='phonenumber'>
-								<input type="button" class='example-form-button submitbtn' value='Заказать'>
+								<input type="submit" class='example-form-button submitbtn' value='Заказать'>
 						</form>
 					</div>
 				</div>
@@ -125,7 +142,7 @@
 							</ul>
 							<p class="tariff-price">22 800 i</p>
 							<div class="button-container">
-							<input type="button" class='tariff-button' value='Заказать'>
+							<input type="button" class='tariff-button show-modal-form' value='Заказать'>
 							</div>
 						</div>
 					</div>
@@ -148,7 +165,7 @@
 							</ul>
 							<p class="tariff-price">45 800 i</p>
 							<div class="button-container">
-							<input type="button" class='tariff-button' value='Заказать'>
+							<input type="button" class='tariff-button show-modal-form' value='Заказать'>
 							</div>
 						</div>
 					</div>
@@ -189,10 +206,10 @@
 						<p class="under">Или оставьте свой номер телефона, мы сами с вами свяжемся!</p>
 					</div>
 					<div class="col-right">
-						<form action="http://formspree.io/ugrumiy@gmail.com" class='questions-form'>
+						<form action="index.php" method='post' class='questions-form'>
 								<input type="text" id='questions-form-name' placeholder='Имя' name='clientname'>
 								<input type="text" id='questions-form-phone' placeholder='Номер телефона' name='phonenumber'>
-								<input type="button" id='questions-form-button' class='submitbtn' value='Перезвоните мне'>
+								<input type="submit" id='questions-form-button' class='submitbtn' value='Перезвоните мне'>
 						</form>
 					</div>
 				</div>
@@ -216,23 +233,72 @@
 
 	<!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="SlickNav/jquery.slicknav.min.js"></script>
     <script src="script/yamaps.js"></script>
     <script src="script/maskedinput.js"></script>
 <script>
+//Модальная форма
+$('.show-modal-form').on('click',function(){
+	$('#modal-block').show()
+})
+$('#modal-block').on('click', function(event){
+	$(this).hide();
+})
+$('#modal-form').on('click', function(event){
+	event.stopPropagation();
+})
+$('#modal-form').on('submit', function(event){
+	$('#modal-block').hide();
+})
+
+$(document).ready(function(){
+    $(document).keyup(function(event) { 
+        if (event.keyCode == 27 && $('#modal-block').is(':visible') ) { // esc keycode
+           $('#modal-block').hide()
+        }
+    });
+});
+
+//Инициализация мобильного меню
 	$(function(){
 		$('#menu').slicknav({
 			prependTo:'#page-header'
+
+			
 		});
 	});
   
- $('form').on('click','.submitbtn',function(){
- 	var clientName = $(this).siblings('input[name="clientname"]').val()
- 	var phoneNumber = $(this).siblings('input[name="phonenumber"]').val()
 
+//Отправка формы через PHPmailer
+$('form').on('submit',function(){
+
+ 	var formData = $(this).serialize();
+
+ 	$.ajax({
+	    type: 'POST',
+	    url: 'phpmailer/examples/gmail.php',
+	    data: formData,
+	    success: function(){
+	    	showHideFormSendResult($('#message-submit-success'))
+	    },
+	    error: function(){
+	    	showHideFormSendResult($('#message-submit-error'))
+	    }
+	});
+ 	return false;
  })
+//Подтверждение отправки
+function showHideFormSendResult(item){
+	    	item.animate({
+	    		left: '+=407'
+	    	})
+	    	.delay(4000)
+	    	.animate({
+	    		left: '-=407'
+	    	})
+}
+
+//Валидация телефонов и маска
 jQuery(function($){
    $('input[name="phonenumber"]').mask("+7 (999) 999-9999");
 });

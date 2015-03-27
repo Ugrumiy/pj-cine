@@ -2,12 +2,79 @@ body, html {
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   min-width: 600px;
+  height: 100%;
 }
 .clearfix:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
+}
+.modal-block {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(25, 25, 25, 0.7);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  display: none;
+}
+.modal-block .modal-form {
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -200px;
+  background: #ffffff -50%;
+  width: 340px;
+  height: 240px;
+}
+.modal-block .modal-form #modal-form-name {
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-bottom: 17px;
+  display: block;
+  position: relative;
+  border: 1px solid #000000;
+  font-size: 14px;
+  color: 636363;
+  border-radius: 7px;
+  width: 100%;
+  padding: 14px 15px 12px 30px;
+  background: #ffffff url('../image/person-icon.png') no-repeat 12px 16px;
+}
+.modal-block .modal-form #modal-form-phone {
+  box-sizing: border-box;
+  margin-bottom: 21px;
+  display: block;
+  position: relative;
+  border: 1px solid #000000;
+  font-size: 14px;
+  color: 636363;
+  border-radius: 7px;
+  width: 100%;
+  padding: 14px 15px 12px 30px;
+  background: #ffffff url('../image/phone-icon.png') no-repeat 12px 16px;
+}
+.modal-block .modal-form #modal-form-button {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  background: #ff1011;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.modal-block .modal-form #modal-form-button:hover {
+  background: #eb0000;
+}
+.modal-block .modal-form #modal-form-button:active {
+  background: #d70000;
 }
 .wrapper-inner {
   min-width: 600px;
@@ -16,6 +83,27 @@ body, html {
   padding-right: 20px;
   margin: 0px auto;
   box-sizing: border-box;
+}
+.message-container {
+  width: 100%;
+  height: 1px;
+  position: fixed;
+  background: red;
+  z-index: 5554;
+}
+.message-container .message {
+  position: absolute;
+  background: #ffffff;
+  padding: 20px;
+  width: 360px;
+  height: 60px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 7px solid #d70000;
+  border-left: none;
+  top: 150px;
+  left: -407px;
+  z-index: 5555;
 }
 .slicknav_menu {
   display: none;
@@ -495,9 +583,18 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
   header .slicknav_menu {
     display: block;
     min-height: 75px;
+    background: #ffffff;
   }
   header .slicknav_nav {
     margin-top: 75px;
+  }
+  header .slicknav_nav li {
+    text-align: center;
+  }
+  header .slicknav_nav li a {
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 10px;
   }
   header .slicknav_btn {
     padding: 0.8em 0.625em;
@@ -586,6 +683,9 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
   main .wrapper-outer-example .example-text-container .col-right .example-form {
     text-align: center;
   }
+  main .wrapper-outer-tariffs .tariffs-container {
+    height: 1000px;
+  }
   main .wrapper-outer-tariffs .tariffs-container .col-left {
     width: 90%;
     padding: 3% 5%;
@@ -597,6 +697,10 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
     width: 90%;
     padding: 3% 5%;
     float: none;
+  }
+  main .wrapper-outer-map #map {
+    width: 100%;
+    height: 430px;
   }
   main .wrapper-outer-questions .questions .questions-text-container .col-left {
     width: 100%;
