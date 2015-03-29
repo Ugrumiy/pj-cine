@@ -75,7 +75,7 @@
 		<div class="wrapper-outer-aboutus">
 			<div class="wrapper-inner aboutus clearfix">
 				<ul class='block-title'>
-					<a name="about-us-anchor"></a> 
+					<a id="about-us-anchor"></a> 
 					<li class="title-border"></li>
 					<li class='title'>О нас</li>
 					<li class="title-border"></li>
@@ -95,17 +95,17 @@
 		<div class="wrapper-outer-example">
 			<div class="wrapper-inner example clearfix">
 				<ul class='block-title'>
-					<a name="example-anchor"></a> 
+					<a id="example-anchor"></a> 
 					<li class="title-border"></li>
 					<li class='title'>Пример предложения</li>
 					<li class="title-border"></li>
 				</ul>
 				<div class="example-text-container clearfix">
 					<div class="col-left">
-						<iframe width="100%" height="380" src="https://www.youtube.com/embed/p4zluA60hjs" frameborder="0" allowfullscreen style='max-width:650px;' class='ytube'></iframe>
+						<iframe width="100%" height="380" src="https://www.youtube.com/embed/r9gdBb52-aw" frameborder="0" allowfullscreen style='max-width:650px;' class='ytube'></iframe>
 					</div>
 					<div class="col-right">
-						<p class='text-main'>Прекрасная пара: Станислав и Ирина. Подготовления мероприятия заняло у нас целых три недели. Был снят клип, в котором Станислав принимал главное участие, а также слайдшоу из фотографий. Для предложения был выбран кинотестр IMAX в Реутове. По завершении был смонтирован итоговый ролик, который будет храниться в семейном архиве новой ячейки нашего общества.</p>
+						<p class='text-main'>Прекрасная пара: Станислав и Ирина. Подготовление мероприятия заняло у нас целых три недели. Был снят клип, в котором Станислав принимал главное участие, а также слайдшоу из фотографий. Для предложения был выбран кинотеатр IMAX в Реутове. По завершении был смонтирован итоговый ролик, который будет храниться в семейном архиве новой ячейки нашего общества.</p>
 						<p class='text-main'>Ориентировочная стоимость всего проекта 185 000 рублей.</p>
 						<form action="mailer.php" method='post' class='example-form'>
 							<p class="example-form-title">Хотите так же? Отправьте заявку!</p>
@@ -120,7 +120,7 @@
 		<div class="wrapper-outer-tariffs">
 			<div class="wrapper-inner tariffs clearfix">
 				<ul class='block-title'>
-					<a name="tariffs-anchor"></a> 
+					<a id="tariffs-anchor"></a> 
 					<li class="title-border"></li>
 					<li class='title'>Тарифы</li>
 					<li class="title-border"></li>
@@ -177,12 +177,12 @@
 		<div class="wrapper-outer-cinemas">
 			<div class="wrapper-inner cinemas clearfix">
 				<ul class='block-title'>
-					<a name="cinemas-anchor"></a> 
+					<a id="cinemas-anchor"></a> 
 					<li class="title-border"></li>
 					<li class='title'>Кинотеатры</li>
 					<li class="title-border"></li>
 				</ul>
-				<p class="text-main">Мы сотрудничаем со многими кинотеатрами города Москвы. Ниже вы можете посмотреть список всех кинотеатров на карте и выбрать тот, который подходит вам. Если вы хотите сделать предложение в каком-то определенном киноттеатре, которого нет в нашем списке, позвоните нам, мы постараемся заключить договор и с этим кинотеатром тоже.</p>
+				<p class="text-main">Мы сотрудничаем со многими кинотеатрами города Москвы. Ниже вы можете посмотреть список всех кинотеатров на карте и выбрать тот, который подходит вам. Если вы хотите сделать предложение в каком-то определенном кинотеатре, которого нет в нашем списке, позвоните нам, мы постараемся заключить договор и с этим кинотеатром тоже.</p>
 			</div>
 		</div>
 
@@ -195,7 +195,7 @@
 		<div class="wrapper-outer-questions">
 			<div class="wrapper-inner questions clearfix">
 				<ul class='block-title'>
-					<a name="contacts-anchor"></a> 
+					<a id="contacts-anchor"></a> 
 					<li class="title-border"></li>
 					<li class='title'>Остались вопросы?</li>
 					<li class="title-border"></li>
@@ -237,73 +237,6 @@
     <script src="SlickNav/jquery.slicknav.min.js"></script>
     <script src="script/yamaps.js"></script>
     <script src="script/maskedinput.js"></script>
-<script>
-//Модальная форма
-$('.show-modal-form').on('click',function(){
-	$('#modal-block').show()
-})
-$('#modal-block').on('click', function(event){
-	$(this).hide();
-})
-$('#modal-form').on('click', function(event){
-	event.stopPropagation();
-})
-$('#modal-form').on('submit', function(event){
-	$('#modal-block').hide();
-})
-
-$(document).ready(function(){
-    $(document).keyup(function(event) { 
-        if (event.keyCode == 27 && $('#modal-block').is(':visible') ) { // esc keycode
-           $('#modal-block').hide()
-        }
-    });
-});
-
-//Инициализация мобильного меню
-	$(function(){
-		$('#menu').slicknav({
-			prependTo:'#page-header'
-
-			
-		});
-	});
-  
-
-//Отправка формы через PHPmailer
-$('form').on('submit',function(){
-
- 	var formData = $(this).serialize();
-
- 	$.ajax({
-	    type: 'POST',
-	    url: 'phpmailer/examples/gmail.php',
-	    data: formData,
-	    success: function(){
-	    	showHideFormSendResult($('#message-submit-success'))
-	    },
-	    error: function(){
-	    	showHideFormSendResult($('#message-submit-error'))
-	    }
-	});
- 	return false;
- })
-//Подтверждение отправки
-function showHideFormSendResult(item){
-	    	item.animate({
-	    		left: '+=407'
-	    	})
-	    	.delay(4000)
-	    	.animate({
-	    		left: '-=407'
-	    	})
-}
-
-//Валидация телефонов и маска
-jQuery(function($){
-   $('input[name="phonenumber"]').mask("+7 (999) 999-9999");
-});
-</script>
-
+    <script src="script/script.js"></script>
 </body>
 </html>
