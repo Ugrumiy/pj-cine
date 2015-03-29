@@ -10,6 +10,15 @@ body, html {
   height: 0;
   clear: both;
 }
+input, textarea, select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+}
+a[href^=tel] {
+  color: inherit;
+  text-decoration: none;
+}
 .modal-block {
   text-align: center;
   height: 100%;
@@ -60,6 +69,7 @@ body, html {
   background: #ffffff url('../image/phone-icon.png') no-repeat 12px 16px;
 }
 .modal-block .modal-form #modal-form-button {
+  -webkit-appearance: none;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -174,6 +184,7 @@ header .phone-menu .callback-form .callbackbtn:active {
 }
 header .phone-menu nav {
   float: right;
+  margin-right: 96px;
 }
 header .phone-menu .top-menu {
   margin-top: 10px;
@@ -304,6 +315,7 @@ main .wrapper-outer-example .example-text-container .col-right .example-form inp
   margin-bottom: 20px;
 }
 main .wrapper-outer-example .example-text-container .col-right .example-form .example-form-button {
+  -webkit-appearance: none;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -377,6 +389,9 @@ main .wrapper-outer-tariffs .tariffs-container .tariff-item .tariff-price {
   font-size: 28px;
   text-align: center;
   margin: 22px 0px;
+}
+main .wrapper-outer-tariffs .tariffs-container .tariff-item .tariff-price .rouble {
+  font-family: 'als_rublregular';
 }
 main .wrapper-outer-tariffs .tariffs-container .tariff-item .button-container {
   text-align: center;
@@ -490,6 +505,7 @@ main .wrapper-outer-questions .questions .col-right .questions-form #questions-f
   background: #ffffff url('../image/phone-icon.png') no-repeat 12px 16px;
 }
 main .wrapper-outer-questions .questions .col-right .questions-form #questions-form-button {
+  -webkit-appearance: none;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -551,7 +567,10 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
   header .phone-menu .callback-form .callbackbtn {
     left: 360px;
   }
-  header .phone-menu .callback-form .top-menu {
+  header .phone-menu nav {
+    margin-right: 20px;
+  }
+  header .phone-menu nav .top-menu {
     margin-left: 0px;
   }
   main .wrapper-outer-top-pic .top-pic {
@@ -641,14 +660,15 @@ footer .wrapper-outer-copyright .wrapper-inner .col-left .copyright-under {
     marginbottom: 10px;
   }
   main .wrapper-outer-top-pic {
-    text-align: center;
+    height: 400px;
   }
   main .wrapper-outer-top-pic .top-pic {
     height: 100%;
-    font-size: 48px;
   }
   main .wrapper-outer-top-pic .top-pic p {
-    margin-top: -60px;
+    margin-top: -30px;
+    font-size: 35px;
+    line-height: 50px;
   }
   main .wrapper-outer-aboutus .aboutus-text-container .col-left {
     float: none;

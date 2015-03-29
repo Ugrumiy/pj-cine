@@ -49,7 +49,7 @@ $mail->setFrom('from@example.com', 'Romantic Moscow');
 $mail->addReplyTo('replyto@example.com', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('ugrumiy@gmail.com', 'John Doe');
+$mail->addAddress('info@романтическая-москва.рф', 'John Doe');
 
 //Set the subject line
 $mail->Subject = 'New Client';
