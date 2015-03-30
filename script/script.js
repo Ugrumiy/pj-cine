@@ -29,7 +29,7 @@ $(document).ready(function(){
 		});
 	});
   
-
+/*
 //Отправка формы через PHPmailer
 $('form').on('submit',function(){
 
@@ -58,7 +58,7 @@ function showHideFormSendResult(item){
 	    		left: '-=407'
 	    	})
 }
-
+*/
 //Валидация телефонов и маска
 jQuery(function($){
    $('input[name="phonenumber"]').mask("+7 (999) 999-9999");
